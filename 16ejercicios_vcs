@@ -1,0 +1,131 @@
+print ("Ejercicio 1: Contar ocurrencias de elementos")
+palabras = ["python", "java", "python", "ctt"]
+contar1 = palabras.count ("python")
+contar2 = palabras.count ("java")
+contar3 = palabras.count ("ctt")
+
+print (f"python: {contar1}, java: {contar2}, ctt:{contar3}")}
+
+
+---------------------------------------------------
+print ("Ejercicio 2")
+dic1 = {'a': 1, 'b': 2}
+dic2 = {'b': 3, 'c': 4}
+
+copiar = dic1.copy()
+
+for clave, valor in dic2.items():
+    if clave in copiar:
+        copiar[clave] += valor
+    else:
+        copiar[clave] = valor
+
+print(copiar)
+
+-------------------------------------------------------------------------
+
+print ("Ejercicio 3 ")
+numeros = [1, 1, 2, 3,3,3]
+contar = numeros.count (1)
+contar2 = numeros.count (2)
+contar3 = numeros.count (3)
+
+print (f" 1: {contar}, 2: {contar2}, 3:{contar3}")
+--------------------------------------------------------------------------------------
+print ("Ejercicio 4")
+palabras = ["hola", "mundo", "python", "programacion"]
+longitud = [palabra for palabra in palabras if len(palabra)>6]
+print (longitud)
+---------------------------------------------------------------------------------------------------
+print ("Ejercicio 5")
+tuplas = [(1,2), (3,4), (5,6)]
+tuplasinv = [tup[::-1] for tup in tuplas]
+print (tuplasinv)
+-------------------------------------------------------
+print ("Ejercicio 6")
+numeros = [1,2,3,1,2,1]
+contar = {}
+for elemento in numeros:
+    if elemento in (contar):
+        contar[elemento] +=1
+else:
+        contar[elemento] =1
+    
+frecuente = max (contar, key=contar.get)
+print (frecuente)
+-------------------------------------------------------------------------------------------
+print ("Ejercicio 7")
+conjunto1 = {1, 2, 3}
+conjunto2 = {1, 2, 3, 4, 5}
+
+res = conjunto1.issubset(conjunto2)
+print(res)
+---------------------------------------------------------------------
+print ("Ejercicio 8")
+personas = [{"nombre": "Ana", "edad": 25}, {"nombre": "Luis", "edad": 25}, {"nombre": "Carlos", "edad": 30}]
+agrup = {}
+for persona in personas:
+    edad = persona["edad"]
+    nombre = persona["nombre"]
+
+    if edad in agrup:
+        agrup[edad].append(nombre)
+    else:
+        agrup[edad] = [nombre]
+print(agrup)
+-------------------------------------------------------------------
+print ("Ejercicio 9")
+numeros = [5, 3, 8, 6, 2]
+numeros.sort()
+
+print(numeros)
+------------------------------------------------------------------------------
+print ("Ejercicio 10")
+numeros = [1, 2, 3, 4, 5]
+limite = 3
+resultado = [num for num in numeros if num >= limite]
+
+print(resultado)
+----------------------------------------------------------------
+print ("Ejercicio 11")
+lista_de_listas = [[1, 2], [3, 4], [5]]
+resultado = [elemento for sublista in lista_de_listas for elemento in sublista]
+
+print(resultado)
+--------------------------------------------------------------------------------------------
+
+print ("Ejercicio 12")
+numeros = [1, 3, 2, 4, 5]
+numeros.sort()
+medio = len(numeros) // 2
+numero_enmedio = numeros[medio]
+
+print(numero_enmedio)
+-------------------------------------------------------------------------
+print ("Ejercicio 13")
+numeros = [1, 2, 3]
+resultado = [num for num in numeros for _ in range(2)]
+
+print(resultado)
+
+------------------------------------------------------------------------------
+print ("Ejercicio 14")
+frases = ["Hola mundo", "Python es genial", "Me gusta programar"]
+rest = {i: frase.count(' ') + 1 for i, frase in enumerate(frases)}
+
+print(rest)
+
+----------------------------------------------------------------
+print ("Ejercicio 15")
+diccionario = {'a': 10, 'b': 20, 'c': 5}
+cmax = max(diccionario, key=diccionario.get)
+print(cmax)
+--------------------------------------------------------
+print ("Ejercicio 16")
+palabras = ["ana", "oso", "hola", "level"]
+resultado = [palabra for palabra in palabras if palabra == palabra[::-1]]
+
+print(resultado)
+
+
+
